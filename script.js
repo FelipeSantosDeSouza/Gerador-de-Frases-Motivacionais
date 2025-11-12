@@ -17,10 +17,12 @@ const frases= ["Acredite em si mesmo e tudo será possível 💪",
   botao.addEventListener("click", function() {
     const indice = Math.floor(Math.random() * frases.length);
     frase.textContent=(frases[indice]);
-    });
+   
 
-    localStorage.setItem("ultimaFrase", JSON.stringify( frases[indice]));
+    localStorage.setItem("ultimaFrase",( frases[indice]));
+ });
 
     const ultima = localStorage.getItem("ultimaFrase");
-if (ultima) frase.textContent = ultima;
-
+if (ultima){
+ frase.textContent = ultima;
+}
