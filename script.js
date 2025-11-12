@@ -17,10 +17,6 @@ const frases= ["Acredite em si mesmo e tudo será possível 💪",
   botao.addEventListener("click", function() {
     const indice = Math.floor(Math.random() * frases.length);
     frase.textContent=(frases[indice]);
-
-
-  const cor = `hsl(${Math.floor(Math.random() * 360)}, 70%, 50%)`;
-  document.getElementById("main").style.background = cor;
     });
 
     localStorage.setItem("ultimaFrase", JSON.stringify( frases[indice]));
